@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python/
+env/
+venv/
+*.egg
+*.egg-info/
+dist/
+build/
+*.so
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+
+# PyCharm
+.idea/
+
+# Llama-cpp-python specific (large model files)
+models/
