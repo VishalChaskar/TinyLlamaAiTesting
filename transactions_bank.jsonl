@@ -1,0 +1,10 @@
+{"instruction": "If a customer converts €1200 to USD at 1.075, how much should they get?", "input": "", "output": "€1200 × 1.075 = $1290. The customer should receive $1290."}
+{"instruction": "Compare ₹49999.50 and ₹50000. Which one needs PAN as per RBI rules?", "input": "", "output": "₹50000 triggers the PAN requirement under RBI guidelines. ₹49999.50 does not."}
+{"instruction": "Customer deposited €3000, €2000, €2500, and €2500 today. Is it over the AML daily limit of €10000?", "input": "", "output": "Yes. The total is €10000, which hits the AML reporting threshold."}
+{"instruction": "Which FX rate is better for the customer buying USD: 83.2012 or 83.2010?", "input": "", "output": "83.2010 is better because it is lower. Customers get more USD per INR."}
+{"instruction": "Convert $127.4867 to EUR at 0.9251. System shows €117.91. Is the rounding correct?", "input": "", "output": "$127.4867 × 0.9251 = €117.9113 → Rounded to €117.91. Rounding is correct to 2 decimals."}
+{"instruction": "Customer A received $1000. Converted to INR at 82.74. How much should be credited?", "input": "", "output": "$1000 × 82.74 = ₹82740 should be credited."}
+{"instruction": "Forex markup of 2.5% applied on $2000 transaction. USD/INR = 83.20. What is the fee in INR?", "input": "", "output": "$2000 × 83.20 = ₹166400. Markup = 2.5% of ₹166400 = ₹4160."}
+{"instruction": "Customer does two transactions: ₹9999 and ₹10001. Which one may trigger suspicious alert?", "input": "", "output": "₹10001 may trigger a suspicious transaction alert, as it crosses ₹10000."}
+{"instruction": "Customer sent €5000. FX rate is 1.093. Only $5350 received. Is this correct?", "input": "", "output": "Expected: €5000 × 1.093 = $5465. Received $5350 → Possible shortfall or fee involved."}
+{"instruction": "Customer withdrew ₹2000 from ATM 5 times in a day. Is it within free withdrawal limits?", "input": "", "output": "Most banks allow 3–5 free withdrawals. If policy is 3, this exceeds it. Charges may apply."}

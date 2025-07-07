@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F R E E _ A I</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #000000; /* Deep black background like mi.com */
+            color: #ffffff; /* White text for contrast */
+        }
+        h1 {
+            text-align: center;
+            color: #ff4d00; /* Vibrant orange, inspired by mi.com accents */
+            text-shadow: 2px 2px 4px rgba(255, 77, 0, 0.5); /* Subtle orange glow */
+        }
+        .container {
+            background-color: #1a1a1a; /* Dark gray-black, mimicking mi.com's dark sections */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 77, 0, 0.3); /* Orange shadow for depth */
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ff4d00; /* Orange border */
+            border-radius: 4px;
+            background-color: #2d2d2d; /* Dark input background */
+            color: #ffffff; /* White text in input */
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #ff4d00; /* Orange button background */
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Smooth hover effect */
+        }
+        button:hover {
+            background-color: #e64d00; /* Slightly darker orange on hover */
+        }
+        .response, .error {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            border-left: 4px solid #ff4d00; /* Orange left border */
+        }
+        .response {
+            background-color: #2d2d2d; /* Dark background for response */
+            color: #ffffff;
+        }
+        .error {
+            background-color: #4d0000; /* Dark red for errors, toned with black */
+            color: #ff4d00; /* Orange text for error contrast */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>F R E E _ A I</h1>
+        <form method="POST" action="/">
+            <input type="text" name="user_input" placeholder="Type your question here..." value="{{ user_input or '' }}" required>
+            <button type="submit">Search</button>
+        </form>
+        {% if ai_response %}
+        <div class="response">
+            <strong>Answer:</strong> {{ ai_response }}
+        </div>
+        {% endif %}
+        {% if error %}
+        <div class="error">
+            <strong>Error:</strong> {{ error }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
