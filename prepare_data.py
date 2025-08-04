@@ -5,7 +5,6 @@ def load_and_prepare_dataset(path, tokenizer):
 
     def format_chat(example):
         text = f"<|system|>You are a helpful assistant.<|end|><|user|>{example['instruction']}<|end|><|assistant|>{example['output']}<|end|>"
-
         tokens = tokenizer(
             text,
             truncation=True,
@@ -13,7 +12,6 @@ def load_and_prepare_dataset(path, tokenizer):
             max_length=512,
             return_attention_mask=True
         )
-
         return {
             "input_ids": tokens["input_ids"],
             "attention_mask": tokens["attention_mask"],

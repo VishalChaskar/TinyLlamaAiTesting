@@ -1,18 +1,26 @@
-from transformers import AutoModelForCausalLM, AutoTokenizer, TrainingArguments, Trainer, \
-    DataCollatorForLanguageModeling
+from transformers import AutoModelForCausalLM, AutoTokenizer, TrainingArguments, Trainer, DataCollatorForLanguageModeling
 from peft import get_peft_model, LoraConfig, TaskType
 from prepare_data import load_and_prepare_dataset
 import torch
-
+import os
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f" Training on: {device}")
-# Load tokenizer and model
+
+# === Model & tokenizer path ===
 model_path = "./models/TinyLlama-1.1B-Chat-v1.0"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
-model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.float16)
 
-# Apply LoRA
+# === Load base model ===
+model = AutoModelForCausalLM.from_pretrained(
+    model_path,
+    torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+)
+
+# ✅ CRUCIAL STEP: Resize model embeddings to match tokenizer vocab
+model.resize_token_embeddings(len(tokenizer))
+
+# === Apply LoRA ===
 peft_config = LoraConfig(
     task_type=TaskType.CAUSAL_LM,
     inference_mode=False,
@@ -23,13 +31,13 @@ peft_config = LoraConfig(
 model = get_peft_model(model, peft_config)
 model.to(device)
 
-# Load dataset
-dataset = load_and_prepare_dataset("transactions_bank.jsonl",tokenizer)
+# === Load training dataset ===
+dataset = load_and_prepare_dataset("bank_data.jsonl", tokenizer)
 
-# Data collator
+# === Data collator ===
 data_collator = DataCollatorForLanguageModeling(tokenizer, mlm=False)
 
-# Training arguments
+# === Training arguments ===
 training_args = TrainingArguments(
     output_dir="./tinyllama_lora_output",
     per_device_train_batch_size=1,
@@ -44,7 +52,7 @@ training_args = TrainingArguments(
     remove_unused_columns=False
 )
 
-# Trainer
+# === Trainer ===
 trainer = Trainer(
     model=model,
     args=training_args,
@@ -52,11 +60,12 @@ trainer = Trainer(
     data_collator=data_collator
 )
 
-# Start training
+# === Start training ===
 trainer.train()
 
-# Save final adapter
+# === Save LoRA adapter ===
 model.save_pretrained("./tinyllama_lora_output")
 tokenizer.save_pretrained("./tinyllama_lora_output")
+
 torch.cuda.empty_cache()
-print("Successfully trained model")
+print("✅ Successfully trained and saved LoRA adapter")

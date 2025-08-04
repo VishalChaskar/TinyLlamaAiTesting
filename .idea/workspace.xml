@@ -4,16 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="036bc770-e659-448e-8154-d393ec5472a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/TinyLlamaAiTesting.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/READMD.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+    <list default="true" id="036bc770-e659-448e-8154-d393ec5472a9" name="Changes" comment="FineTuning with proxy data">
+      <change afterPath="$PROJECT_DIR$/bank_data.jsonl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/llm_rag_lora.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/local_data/example.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lora+rag.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_llm_lora.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TinyLlamaAiTesting.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TinyLlamaAiTesting.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finetune.py" beforeDir="false" afterPath="$PROJECT_DIR$/finetune.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/TinyLlama-1.1B-Chat-v1.0/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/models/TinyLlama-1.1B-Chat-v1.0/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prepare_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/prepare_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/transactions_bank.jsonl" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +35,32 @@
       </list>
     </option>
   </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform)); sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo, NoAppException&#10;for module in [&quot;main.py&quot;, &quot;wsgi.py&quot;, &quot;app.py&quot;]:&#10;    try: locals().update(ScriptInfo(app_import_path=module, create_app=None).load_app().make_shell_context()); print(&quot;\nFlask App: %s&quot; % app.import_name); break&#10;    except NoAppException: pass">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform)); sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo, NoAppException&#10;for module in [&quot;main.py&quot;, &quot;wsgi.py&quot;, &quot;app.py&quot;]:&#10;    try: locals().update(ScriptInfo(app_import_path=module, create_app=None).load_app().make_shell_context()); print(&quot;\nFlask App: %s&quot; % app.import_name); break&#10;    except NoAppException: pass" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;VishalChaskar&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/VishalChaskar/TinyLlamaAiTesting.git&quot;,
+    &quot;accountId&quot;: &quot;ad78f31d-4308-47fd-8330-e599cc11f8ea&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -40,12 +71,21 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JavaScript Debug.index.html.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.LLM+adaptors+rag.executor": "Run",
+    "Python.app.executor": "Run",
+    "Python.app2.executor": "Run",
+    "Python.app3.executor": "Run",
+    "Python.apperrorfree.executor": "Run",
+    "Python.finetune.executor": "Run",
     "Python.main.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.test_llm_lora.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/VISHAL/PycharmProjects/TinyLlamaAiTesting/models",
+    "git-widget-placeholder": "develop",
+    "last_opened_file_path": "C:/Users/VISHAL/PycharmProjects/TinyLlamaAiTesting",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -57,14 +97,20 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\VISHAL\PycharmProjects\TinyLlamaAiTesting" />
+      <recent name="C:\Users\VISHAL\PycharmProjects\TinyLlamaAiTesting\tinyllama_lora_output" />
+      <recent name="C:\Users\VISHAL\PycharmProjects\TinyLlamaAiTesting\local_data" />
       <recent name="C:\Users\VISHAL\PycharmProjects\TinyLlamaAiTesting\models" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\VISHAL\PycharmProjects\TinyLlamaAiTesting\templates" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-PY-251.25410.159" />
-        <option value="bundled-python-sdk-e0ed3721d81e-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.25410.159" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-PY-251.26927.90" />
+        <option value="bundled-python-sdk-41e8cd69c857-64d779b69b7a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.26927.90" />
       </set>
     </attachedChunks>
   </component>
@@ -77,14 +123,76 @@
       <updated>1749397706796</updated>
       <workItem from="1749397707841" duration="1177000" />
       <workItem from="1749398907263" duration="193000" />
-      <workItem from="1749399329236" duration="3020000" />
+      <workItem from="1749399329236" duration="10563000" />
+      <workItem from="1750098107720" duration="1374000" />
+      <workItem from="1750581624673" duration="11058000" />
+      <workItem from="1750965244745" duration="2000" />
+      <workItem from="1750969126345" duration="688000" />
+      <workItem from="1751052419832" duration="4766000" />
+      <workItem from="1751152598733" duration="7026000" />
+      <workItem from="1751534619327" duration="107000" />
+      <workItem from="1751534777319" duration="613000" />
+      <workItem from="1751568080006" duration="322000" />
+      <workItem from="1751570964203" duration="2725000" />
+      <workItem from="1751573774364" duration="559000" />
+      <workItem from="1751574397087" duration="710000" />
+      <workItem from="1751575352899" duration="12379000" />
+      <workItem from="1753310732707" duration="1736000" />
+      <workItem from="1753312490578" duration="3000" />
+      <workItem from="1753557219349" duration="698000" />
+      <workItem from="1753603780038" duration="19991000" />
+      <workItem from="1754260052580" duration="18785000" />
+      <workItem from="1754339233612" duration="2315000" />
     </task>
+    <task id="LOCAL-00001" summary="FineTuning with proxy data">
+      <option name="closed" value="true" />
+      <created>1751918398077</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1751918398077</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="FineTuning with proxy data" />
+    <option name="LAST_COMMIT_MESSAGE" value="FineTuning with proxy data" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/.venv/Lib/site-packages/fitz/__init__.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TinyLlamaAiTesting$main.coverage" NAME="main Coverage Results" MODIFIED="1749403575824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TinyLlamaAiTesting$main.coverage" NAME="main Coverage Results" MODIFIED="1750612283801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TinyLlamaAiTesting$LLM_adaptors_rag.coverage" NAME="LLM+adaptors+rag Coverage Results" MODIFIED="1754270408142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TinyLlamaAiTesting$finetune.coverage" NAME="finetune Coverage Results" MODIFIED="1754341546314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TinyLlamaAiTesting$app3.coverage" NAME="app3 Coverage Results" MODIFIED="1754254604154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TinyLlamaAiTesting$apperrorfree.coverage" NAME="apperrorfree Coverage Results" MODIFIED="1754262695175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TinyLlamaAiTesting$test.coverage" NAME="test Coverage Results" MODIFIED="1754266119015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TinyLlamaAiTesting$app.coverage" NAME="app Coverage Results" MODIFIED="1754262398776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TinyLlamaAiTesting$test_llm_lora.coverage" NAME="test_llm_lora Coverage Results" MODIFIED="1754340283464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TinyLlamaAiTesting$app2.coverage" NAME="app2 Coverage Results" MODIFIED="1754258529486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
